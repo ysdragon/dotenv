@@ -17,7 +17,7 @@
 Using Ring Package Manager **`ringpm`**
 
 ```bash
-ringpm install dotenv from ysdragon
+ringpm install dotenv
 ```
 
 ## Example
