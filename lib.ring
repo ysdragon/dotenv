@@ -85,4 +85,30 @@ class dotenv {
             }
         }
     }
+
+    // Function to require a variable and add it to the .env file
+    func requiredVar(var) {
+        # Check if defaultFile exists
+        if(!fexists(defaultFile)) {
+            // Create an empty file if .env file doesn't exist
+            fopen(defaultFile, "w")
+            // Set the newVar
+            newVar = var + "=" + nl
+        else
+            newVar = nl + var + "="
+        }
+        // Load existing environment variables
+        loadDefault()
+        // Check if the variable already exists
+        for envVar in envVars {
+            if(envVar[1] = var) {
+                print("Error: #{var} already exists!\n")
+                return
+            }
+        }
+        // Append the variable to the .env file
+        fp = fopen(defaultFile, "a")
+        fwrite(fp, newVar)
+        fclose(fp)
+    }
 }
