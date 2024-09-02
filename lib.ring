@@ -38,16 +38,15 @@ class dotenv {
             if(line != "" and not startsWith(line, "#")) { 
                 // Split the line into key and value
                 parts = split(line, "=") 
+                // If there are less than 2 parts, make value empty
+                if (len(parts) < 2) {
+                    value = "" 
+                else
+                    // Get the value
+                    value = trim(parts[2]) 
+                }
                 // Get the key
                 key = trim(parts[1])
-                // Initialize value as empty string
-                value = ""
-                // If there are more than 2 parts, append the remaining parts as the value
-                if(len(parts) > 2) {
-                    value = parts[2] + "="
-                elseif (len(parts) = 2)
-                    value = "" 
-                }
                 // Store in the list
                 envVars[key] = value
             }
