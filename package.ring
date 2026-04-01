@@ -10,7 +10,7 @@ aPackageInfo = [
 	:versions = 	[
 		[
 			:version = "1.1.0",
-			:branch = "master"
+			:branch = "main"
 		]
 	],
 	:libs = 	[
