@@ -1,9 +1,12 @@
 load "dotenv.ring"
 
-dotenv = new dotenv
+dotenv = new dotenv()
 
-// Use requiredVar to add required var(s) by your application to .env.
-// And create .env file if it doesn't exist.
+// Ensure required variables exist in .env
+// If the key is missing, a stub (KEY=) is appended to the file
+// If .env doesn't exist, it is created automatically
 
 dotenv.requiredVar("HOST")
 dotenv.requiredVar("PORT")
+
+print("Checked required variables.\n")

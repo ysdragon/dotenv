@@ -1,14 +1,14 @@
 load "dotenv.ring"
 
-dotenv = new dotenv
+dotenv = new dotenv()
 
-// Load custom .env file
+// Load a custom .env file instead of the default
 dotenv.loadFile(".env.example")
 
 username = dotenv.getEnv("USERNAME")
 password = dotenv.getEnv("PASSWORD")
 state = dotenv.getEnv("STATE")
 
-print(username + "\n")
-print(password + "\n")
-print(state + "\n")
+print("Username: #{username}\n")
+print("Password: #{password}\n")
+print("State:    #{state}\n")

@@ -1,14 +1,13 @@
 load "dotenv.ring"
 
-dotenv = new dotenv
+// Create a new instance (automatically loads .env via init())
+dotenv = new dotenv()
 
-// Load default .env file
-dotenv.loadDefault()
-
+// Retrieve individual variables
 username = dotenv.getEnv("USERNAME")
 password = dotenv.getEnv("PASSWORD")
 state = dotenv.getEnv("STATE")
 
-print(username + "\n")
-print(password + "\n")
-print(state + "\n")
+print("Username: #{username}\n")
+print("Password: #{password}\n")
+print("State:    #{state}\n")

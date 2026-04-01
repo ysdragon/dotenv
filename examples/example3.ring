@@ -1,24 +1,19 @@
 load "dotenv.ring"
 
-dotenv = new dotenv
+dotenv = new dotenv()
 
-// Load default .env file
-dotenv.loadDefault()
-
-// Set env vars from the .env file
-print("############# set\n")
+// Push all loaded variables into the system environment
+print("--- setting env vars ---\n")
 dotenv.setEnvVars()
 
-print("############# get\n")
-print(sysget("USERNAME") + "\n")
-print(sysget("PASSWORD") + "\n")
-print(sysget("STATE") + "\n")
+print("USERNAME: #{sysget("USERNAME")}\n")
+print("PASSWORD: #{sysget("PASSWORD")}\n")
+print("STATE:    #{sysget("STATE")}\n")
 
-// Unset env vars from the .env file
-print("############# unset\n")
+// Remove them from the system environment
+print("--- unsetting env vars ---\n")
 dotenv.unsetEnvVars()
 
-print("############# get\n")
-print(sysget("USERNAME"))
-print(sysget("PASSWORD"))
-print(sysget("STATE"))
+print("USERNAME: #{sysget("USERNAME")}\n")
+print("PASSWORD: #{sysget("PASSWORD")}\n")
+print("STATE:    #{sysget("STATE")}\n")

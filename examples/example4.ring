@@ -1,24 +1,20 @@
 load "dotenv.ring"
 
-dotenv = new dotenv
+dotenv = new dotenv()
 
-// Load custom file
+// Load a custom file and push its variables into the system environment
 dotenv.loadFile(".env.example")
 
-// Set env vars from the custom .env file
-print("############# set\n")
+print("--- setting env vars from .env.example ---\n")
 dotenv.setEnvVars()
 
-print("############# get\n")
-print(sysget("USERNAME") + "\n")
-print(sysget("PASSWORD") + "\n")
-print(sysget("STATE") + "\n")
+print("USERNAME: #{sysget("USERNAME")}\n")
+print("PASSWORD: #{sysget("PASSWORD")}\n")
+print("STATE:    #{sysget("STATE")}\n")
 
-// Unset env vars from the custom .env file
-print("############# unset\n")
+print("--- unsetting env vars ---\n")
 dotenv.unsetEnvVars()
 
-print("############# get\n")
-print(sysget("USERNAME"))
-print(sysget("PASSWORD"))
-print(sysget("STATE"))
+print("USERNAME: #{sysget("USERNAME")}\n")
+print("PASSWORD: #{sysget("PASSWORD")}\n")
+print("STATE:    #{sysget("STATE")}\n")
