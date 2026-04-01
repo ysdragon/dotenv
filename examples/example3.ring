@@ -6,14 +6,14 @@ dotenv = new dotenv()
 print("--- setting env vars ---\n")
 dotenv.setEnvVars()
 
-print("USERNAME: #{sysget("USERNAME")}\n")
-print("PASSWORD: #{sysget("PASSWORD")}\n")
-print("STATE:    #{sysget("STATE")}\n")
+print("USERNAME: #{sysget('USERNAME')}\n")
+print("PASSWORD: #{sysget('PASSWORD')}\n")
+print("STATE:    #{sysget('STATE')}\n")
 
 // Remove them from the system environment
 print("--- unsetting env vars ---\n")
 dotenv.unsetEnvVars()
 
-print("USERNAME: #{sysget("USERNAME")}\n")
-print("PASSWORD: #{sysget("PASSWORD")}\n")
-print("STATE:    #{sysget("STATE")}\n")
+print("USERNAME: #{sysget('USERNAME')}\n")
+print("PASSWORD: #{sysget('PASSWORD')}\n")
+print("STATE:    #{sysget('STATE')}\n")
