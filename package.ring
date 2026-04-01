@@ -21,16 +21,19 @@ aPackageInfo = [
 		]
 	],
 	:files = 	[
-		"lib.ring",
-		"main.ring",
+		"examples/.env.example",
+		"examples/.env",
 		"examples/example1.ring",
 		"examples/example2.ring",
 		"examples/example3.ring",
 		"examples/example4.ring",
 		"examples/example5.ring",
 		"examples/example6.ring",
-		"examples/.env.example",
-		"examples/.env",
+		"lib.ring",
+		"LICENSE",
+		"main.ring",
+		"test/.env",
+		"test/dotenv_test.ring",
 		"README.md"
 	],
 	:ringfolderfiles = 	[
