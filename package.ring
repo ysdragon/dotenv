@@ -23,12 +23,13 @@ aPackageInfo = [
 	:files = 	[
 		"lib.ring",
 		"main.ring",
-		"examples/example2.ring",
 		"examples/example1.ring",
+		"examples/example2.ring",
+		"examples/example3.ring",
 		"examples/example4.ring",
 		"examples/example5.ring",
+		"examples/example6.ring",
 		"examples/.env.example",
-		"examples/example3.ring",
 		"examples/.env",
 		"README.md"
 	],
